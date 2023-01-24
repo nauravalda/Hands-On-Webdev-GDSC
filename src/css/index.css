@@ -1,0 +1,189 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #232323;
+    font-family: 'Ubuntu';
+    color: #1e1e1e;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    height:130px;
+    top: 0px;
+    z-index:1000;
+    background: linear-gradient(#000000ce 40%, #00000000);
+    display: flex;
+}
+
+.navbar h1{
+    color: rgba(206, 154, 0, 0.963);
+    width:50vw;
+    font-size: 40px;
+    margin-top: 0vw;
+    margin-left: 40px;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+.searchbar{
+    background-color: #d6960139;
+    height: 35px;
+    width: 30vw;
+    margin-top: 12px;
+    border-radius: 20px;
+}
+
+.searchbar input{
+    width: 21vw;
+    height: 34px;
+    outline: none;
+    border: none;
+    background-color: #ffffff00;
+    color: #ececec;
+    font-size: 15px;
+    padding-left: 13px;
+    font-family: 'Ubuntu';
+}
+
+.searchbar button{
+    position: absolute;
+    top: 17px;
+    width: 5vw;
+    border: none;
+    background: #00000000;
+    color: rgba(206, 154, 0, 0.963);
+}
+
+.searchbar button:hover{
+    opacity: 0.8;
+}
+
+.searchbar button i{
+    font-size: 23px;
+}
+
+.frametop{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.874) 20%, rgba(255, 255, 255, 0) 100%);
+    width: 100%;
+    height: 440px;
+    position: absolute;
+    top: 0;
+}
+
+.todaysrecipe img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    max-width: 700px;
+    margin-top: 60px;
+    border-radius: 10px;
+}
+
+.todaysrecipe:hover{
+    opacity: 0.8;
+    transform: scale(1.01);
+}
+
+.todaysrecipe p{
+    position: absolute;
+    color: #ececec;
+    z-index: 3;
+}
+
+.todaysrecipe .t1{
+    font-size: calc(35px + 2vw);
+    font-weight: 1000;
+    width: 40vw;
+    margin-top: 10vw;
+    margin-left: calc(35vw + 90px);
+    margin-right: 10vw;
+    height: 5.5vw;
+    max-height: 40px;
+    color:#ececec;
+    text-align:right;
+}
+
+.todaysrecipe .t2{
+    font-size: 30px;
+    font-weight: 1000;
+    width: calc(39vw + 60px);
+    max-width: 320px;
+    height: 7vw;
+    max-height: 40px;
+    margin-left: calc(2px + 6vw);
+    background-color: rgba(206, 154, 0, 0.963);
+    color:#232323;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.dmr {
+    position: absolute;
+    left: 8.7vw;
+    margin-top: 45px;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: 'Ubuntu';
+    color: rgba(206, 154, 0, 0.963);
+    z-index:1;
+}
+
+.boxes{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    top:120px;
+    width: 100%;
+    align-content: center;
+    align-items: center;
+}
+
+.box{
+    position: relative;
+    width: 260px;
+    height: 260px;
+}
+
+.box p{
+    position: absolute;
+    color: #ececec;
+    z-index: 3;
+    font-size: 20px;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    text-align: center;
+}
+
+.frame1{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.811) 2.5%, rgba(30, 30, 30, 0) 102.5%);
+    border-radius: 10px;
+    z-index:2;
+    width: 240px;
+    height: 240px;
+    position: absolute;
+}
+
+.contentbox{
+    background: #ffffffde;
+    border-radius: 10px;
+    width: 240px;
+    height: 240px;
+}
+
+
+.box:hover{
+    opacity:0.8;
+    transform: scale(1.1);
+}
+
+
+@media screen and (min-width:800px){
+
+}
+
+@media only screen and (max-width:600px){
+
+}
