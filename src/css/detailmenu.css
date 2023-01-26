@@ -6,10 +6,19 @@ body {
     color: #ececec;
 }
 
+::-webkit-scrollbar {
+    display: none;
+  }
+
+html {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
 .navbar {
     position: fixed;
     width: 100%;
-    height:130px;
+    height:200px;
     top: 0px;
     z-index:1000;
     display: flex;
@@ -19,15 +28,15 @@ body {
     color: rgba(206, 154, 0, 0.963);
     width:50vw;
     font-size: 35px;
-    margin-top: 0.7vw;
+    margin-top: 10px;
     margin-left: 75px;
 }
 
 .navbar button{
     position: absolute;
     top: 17px;
-    left: 5px;
-    width: 5vw;
+    left: 15px;
+    width: 25px;
     border: none;
     font-size: 25px;
     background: #00000000;
@@ -38,24 +47,24 @@ body {
     opacity: 0.8;
 }
 
-.contents{
-    display: flex;
-    flex-direction: column;
-}
-
 .foodimg{
     width: 100%;
 }
 
+.detail{
+    font-size: 30px;
+    position :absolute;
+    width: 400px;
+    text-align: right;
+}
+
 .foodimg img{
     margin-top: 50px;
-    width: 450px;
     height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 700px;
+    width: 50vw;
+    min-width: 420px;
+    max-width: 480px;
     border-radius: 20px;
-
 }
 
 .ingredients{
@@ -73,8 +82,19 @@ body {
     padding-left: 50px;
 }
 
-h2{
+.ingredients h2{
     text-align: center;
+}
+
+input[type=checkbox]:checked{
+    background-color: #232323;
+    color: #ececec;
+    border-style: none;
+}
+
+.methods h2{
+    margin-top: -40px;
+    font-size: 35px;
 }
 
 ul{
@@ -86,26 +106,168 @@ ol{
     padding-left: 0px;
 }
 
-@media screen and (min-width: 700px) {
+ol li{
+    line-height: 35px;
+}
+
+ul li{
+    line-height: 30px;
+}
+
+@media screen and (min-width: 640px) {
     body{
-        position:fixed;
+        position:relative;
     }
     .contents{
+        display: flex;
         flex-direction: row;
-        justify-content: space-around;
     }    
     .left{
         width: 70vw;
     }
     .foodimg{
-        text-align: center;
-        padding-left: 22vw;
+        position: fixed;
+        padding-left: 20vw;
+        z-index: 2;
+    }
+    .frameimg{
+        position: fixed;
+        width: 100%;
+        height: 50vw;
+        z-index: 3;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.811) 2.5%, rgba(30, 30, 30, 0) 102.5%);
     }
     .ingredients{
+        position: fixed;
         margin-top: 10vh;
         height: 80vh;
-        width: 20vw;
-        margin-left: 6vw;
+        width: 30vw;
+        max-width: 280px;
+        right: -3vw;
+        z-index: 4;
+        box-shadow: 0 8px 8px 8px #2323237c;
+
+    }
+    .methods{
+        margin-top: 390px;
+        width: 50vw;
+        min-width: 350px;
+        background-color: #00000000;
+        color:rgb(215, 163, 7);
+        margin-left: 10vw;
+    }
+
+    .methods ul{
+        position: absolute;
+    }
+    .detail{
+        position: fixed;
+        font-size: 32px;
+        width: 400px;
+        text-align: right;
+        top: 9vh;
+        text-shadow: 4px 4px 6px #232323;
+        z-index: 4;
+    }
+    .methods h2{
+        position: fixed;
+        z-index: 3;
+    }
+    .topframe{
+        position: fixed;
+        height: 31vw;
+        min-height: 400px;
+        width: 100%;
+        z-index: 2;
+        background-color: #232323;
+    }
+    ul li{
+        line-height: 35px;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 2000px) {
+    .methods{
+        margin-left: 15vw;
+        margin-top: 400px;
+    }
+    .topframe{
+        height: 32vw;
+    }
+    .foodimg{
+        margin-left: 8vw;
+    }
+    
+}
+
+@media screen and (max-width: 640px) {
+
+    .navbar{
+        position: relative;
+        height: 50px;
+    }
+    .topframe{
+        height: 100vw;
+        width: 100%;
+        top: 0px;
+        position: absolute;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.845) 2.5%, rgba(30, 30, 30, 0.082) 102.5%);
+        z-index: 1;
+    }
+    .foodimg{
+        margin-left: 5vw;
+    }
+    .foodimg img{
+        margin-top: 0px;
+        height: auto;
+        width: 80vw;
+        margin-left: 5vw;
+        min-width: 220px;
+        max-width: 480px;
+        border-radius: 20px;
+        z-index: 0;
+    }
+    .detail{
+        font-size: calc(15px + 3vw);
+        width: 80vw;
+        position :absolute;
+        z-index: 4;
+        text-shadow: 4px 4px 6px #232323;
+        margin-top: 40px;
+        margin-left: 9vw;
+    }
+    .ingredients{
+        position: absolute;
+        margin-top: 9vh;
+        height: 70vh;
+        width: 80vw;
+        max-width: 280px;
+        z-index: 4;
+        box-shadow: 8px 8px 8px 8px #6e6e6e3e;
+        margin-left: 25vw;
+        background-color: #282828;
+        color: rgb(215, 163, 7);
+    }
+    .methods{
+        position: absolute;
+        margin-top: calc(600px - 10vw);
+        width: 80vw;
+        min-width: 300px;
+        background-color: #00000000;
+        color:rgb(215, 163, 7);
+    }
+
+
+    .ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .methods h2{
+        background-color: rgb(215, 163, 7);
+        color: #232323;
+        width: 30vw;
+        text-align: center;
+        border-radius: 10px;
     }
 }
     
