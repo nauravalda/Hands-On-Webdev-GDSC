@@ -63,14 +63,48 @@ html {
     color: rgba(206, 154, 0, 0.963);
 }
 
-.searchbar button:hover{
+/* .searchbar button:hover{
     opacity: 0.8;
-}
+} */
 
 .searchbar button i{
     font-size: 23px;
 }
 
+.search{
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000000cc;
+    opacity: 0.7;
+    color:#ececec;
+    position: fixed;
+    top: 55px;
+    width: 230px;
+    max-height: 100px;
+    z-index: 1000;
+    scroll-behavior: smooth;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+ul li{
+    height: 25px;
+    width: 230px;
+    background-color: #00000000;
+}
+ul li a{
+    width:230px;
+    color: #ececec;
+    text-decoration: none;
+}
+ul li:hover{
+    opacity: 1;
+}
 .frametop{
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.874) 20%, rgba(255, 255, 255, 0) 100%);
     width: 100%;
@@ -83,8 +117,8 @@ html {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
-    max-width: 700px;
+    width: 500px;
+    max-height: 500px;
     margin-top: 60px;
     border-radius: 10px;
 }
@@ -104,13 +138,14 @@ html {
     font-size: calc(35px + 2vw);
     font-weight: 1000;
     width: 40vw;
-    margin-top: 10vw;
+    margin-top: 110px;
     margin-left: calc(35vw + 90px);
     margin-right: 10vw;
     height: 5.5vw;
     max-height: 40px;
     color:#ececec;
     text-align:right;
+    text-shadow: #1e1e1e 0px 0px 10px;
 }
 
 .todaysrecipe .t2{
@@ -147,6 +182,7 @@ html {
     width: 100%;
     align-content: center;
     align-items: center;
+    min-height: 340px;
 }
 
 .box{
@@ -164,6 +200,7 @@ html {
     left: 0%;
     right: 0%;
     text-align: center;
+    width: 210px;
 }
 
 .frame1{

@@ -48,7 +48,11 @@ html {
 }
 
 .foodimg{
+    margin-top: 10px;
     width: 100%;
+    width: 550px;
+    height: 330px;
+    overflow: hidden;
 }
 
 .detail{
@@ -60,11 +64,9 @@ html {
 
 .foodimg img{
     margin-top: 50px;
-    height: auto;
-    width: 50vw;
-    min-width: 420px;
-    max-width: 480px;
-    border-radius: 20px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 .ingredients{
@@ -84,6 +86,7 @@ html {
 
 .ingredients h2{
     text-align: center;
+    
 }
 
 input[type=checkbox]:checked{
@@ -99,19 +102,19 @@ input[type=checkbox]:checked{
 
 ul{
     list-style-type: none;
-    padding-left: 30px;
+    padding-left: 15px;
 }
 
-ol{
+p{
+    padding-top:10px;
+    line-height: 20px;
     padding-left: 0px;
-}
-
-ol li{
-    line-height: 35px;
 }
 
 ul li{
     line-height: 30px;
+    width: 40vw;
+    max-width: 245px;
 }
 
 @media screen and (min-width: 640px) {
@@ -123,7 +126,7 @@ ul li{
         flex-direction: row;
     }    
     .left{
-        width: 70vw;
+        width: 80vw;
     }
     .foodimg{
         position: fixed;
@@ -140,12 +143,15 @@ ul li{
     .ingredients{
         position: fixed;
         margin-top: 10vh;
-        height: 80vh;
-        width: 30vw;
-        max-width: 280px;
+        height: 85vh;
+        width: 40vw;
+        max-width: 300px;
         right: -3vw;
         z-index: 4;
         box-shadow: 0 8px 8px 8px #2323237c;
+        padding-left: 10px;
+        max-height: fit-content;
+        overflow-y: scroll;
 
     }
     .methods{
@@ -158,7 +164,9 @@ ul li{
     }
 
     .methods ul{
+        margin-left: 0px;
         position: absolute;
+        padding-right: 10px;
     }
     .detail{
         position: fixed;
@@ -182,7 +190,10 @@ ul li{
         background-color: #232323;
     }
     ul li{
-        line-height: 35px;
+        line-height: 30px;
+    }
+    p{
+        padding-top:10px;
     }
 }
 
@@ -224,7 +235,6 @@ ul li{
         margin-left: 5vw;
         min-width: 220px;
         max-width: 480px;
-        border-radius: 20px;
         z-index: 0;
     }
     .detail{
@@ -239,7 +249,7 @@ ul li{
     .ingredients{
         position: absolute;
         margin-top: 9vh;
-        height: 70vh;
+        height: 90vh;
         width: 80vw;
         max-width: 280px;
         z-index: 4;
@@ -247,10 +257,12 @@ ul li{
         margin-left: 25vw;
         background-color: #282828;
         color: rgb(215, 163, 7);
+        max-height: fit-content;
+        overflow-y: scroll;
     }
     .methods{
         position: absolute;
-        margin-top: calc(600px - 10vw);
+        margin-top: calc(680px - 10vw);
         width: 80vw;
         min-width: 300px;
         background-color: #00000000;
